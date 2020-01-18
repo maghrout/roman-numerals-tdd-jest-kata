@@ -16,4 +16,8 @@ describe('RomanNumeralsConverterTest', () => {
     it('Takes 4 and returns IV', () => {
         expect(romanNumeralsConverter(4)).toEqual("IV");
     })
+
+    it('Takes 5 and returns V', () => {
+        expect(romanNumeralsConverter(5)).toEqual("V");
+    })
 })
