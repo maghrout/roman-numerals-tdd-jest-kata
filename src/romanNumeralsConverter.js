@@ -1,18 +1,18 @@
+const RomanNumerals = [
+    {value: 5, numeral: "V"},
+    {value: 4, numeral: "IV"},
+    {value: 1, numeral: "I"}
+]
+
+
 const RomanNumeralsConverter = (number) => {
     let romanNumerals = "";
 
-    while(number > 0) {
-        if(number === 5) {
-            romanNumerals += "V";
-            number -= 5;
-        } else if(number === 4) {
-            romanNumerals += "IV";
-            number -= 4;
-        } else {
-            romanNumerals += "I";
-            number -= 1;
+    RomanNumerals.forEach((romanNumeral) => {
+        for(;number >= romanNumeral.value; number -= romanNumeral.value) {
+            romanNumerals += romanNumeral.numeral;
         }
-    }
+    })
 
     return romanNumerals;
 }
