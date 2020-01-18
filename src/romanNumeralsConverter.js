@@ -1,11 +1,12 @@
 const RomanNumeralsConverter = (number) => {
-    if(number === 3) {
-        return "III";
+    let romanNumerals = "";
+
+    while(number > 0) {
+        romanNumerals += "I";
+        number -= 1;
     }
-    if(number === 2) {
-        return "II";
-    }
-    return "I";
+
+    return romanNumerals;
 }
 
 module.exports = RomanNumeralsConverter;
